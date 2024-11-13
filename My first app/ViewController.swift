@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+    
+    let firstNumberArray = ["1", "2", "3", "4", "5", "6"]
+    let seconfNumberArray = ["1", "2", "3", "4", "5", "6"]
+
+    @IBAction func nextPressed(_ sender: UIButton) {
+        firstLabel.text = firstNumberArray.randomElement()
+        secondLabel.text = seconfNumberArray.randomElement()
     }
-
-
+    
 }
 
